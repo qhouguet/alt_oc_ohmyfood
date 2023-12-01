@@ -1,0 +1,23 @@
+.primary-button {
+    border-radius: 25px;
+    padding: 15px 20px;
+    background: $btn-gradient;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 25%);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    user-select: none;
+
+    &:active,
+    &:hover {
+        background: $btn-gradient-hover;
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 35%);
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+}

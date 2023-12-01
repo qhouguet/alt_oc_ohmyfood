@@ -1,0 +1,12 @@
+$btn-gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+$btn-gradient-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%),
+    linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+
+$grey: #EAEAEA;
+$light-grey: #F6F6F6;
+$dark-grey: #353535;
+
+$breakpoints: (
+    'medium': (min-width: 768px),
+    'large': (min-width: 1024px)
+);
