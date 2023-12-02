@@ -1,0 +1,24 @@
+.user-guide {
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+        padding: 26px 0 20px 10px;
+    }
+}
+
+.restaurants {
+    background-color: $light-grey;
+    padding: 54px 20px;
+
+    img {
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .restaurants-cards {
+        padding: 24px 0 12px;
+    }
+}

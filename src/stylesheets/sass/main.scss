@@ -4,6 +4,10 @@
 @import 'base/reset',
 'base/typography';
 
-@import 'layout/header';
+@import 'layout/header',
+'layout/main',
+'layout/footer';
 
-@import 'components/buttons';
+@import 'components/buttons',
+'components/guidelist',
+'components/card';
