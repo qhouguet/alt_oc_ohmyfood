@@ -15,11 +15,37 @@
 
         li {
             padding-top: 8px;
+
+            @include respond-to('medium') {
+                margin-right: 15px;
+                min-width: 130px;
+                max-width: 200px;
+            }
         }
 
         i {
             width: 1rem;
             margin-right: 10px;
         }
+
+        @include respond-to('medium') {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+
+    & .desktop-wrapper {
+        @include respond-to('medium') {
+            padding: 0;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+
+    @include respond-to('medium') {
+        display: flex;
+        justify-content: center;
     }
 }

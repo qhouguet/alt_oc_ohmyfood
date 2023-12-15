@@ -6,6 +6,10 @@
     ul {
         padding: 26px 0 20px 10px;
     }
+
+    @include respond-to('medium') {
+        align-items: center;
+    }
 }
 
 .restaurants {
@@ -20,5 +24,46 @@
 
     .restaurants-cards {
         padding: 24px 0 12px;
+
+        @include respond-to('medium') {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
+
+    @include respond-to('medium') {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+}
+
+.desktop-wrapper-restaurant {
+    .restaurant-subheading {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .subheading {
+            font-family: Shrikhand;
+            font-size: 1.75rem;
+            font-weight: 400;
+        }
+
+        .subheading-heart {
+            i {
+                font-size: 1.375rem;
+                padding-right: 25px;
+            }
+
+            .fa-solid {
+                display: none;
+            }
+        }
+    }
+
 }
