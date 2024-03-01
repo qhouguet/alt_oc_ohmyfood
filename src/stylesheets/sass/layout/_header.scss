@@ -4,6 +4,7 @@
     font-family: Roboto, sans-serif;
 
     h1 {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,8 +19,25 @@
 
         img {
             max-width: 200px;
+        }
+
+        a {
+            height: 30px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 1.25rem;
             cursor: pointer;
         }
+    }
+
+    h2 {
+        text-align: center;
     }
 
     .header-location {
@@ -28,6 +46,12 @@
         text-align: center;
         font-size: 1rem;
         padding: 15px 0;
+        position: relative;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        @include respond-to('medium') {
+            box-shadow: none;
+        }
 
         span {
             margin-left: 17px;
@@ -57,6 +81,25 @@
 
         a {
             margin-top: 40px;
+        }
+
+        @include respond-to('medium') {
+            padding-bottom: 30px;
+        }
+    }
+
+    .hero-restaurant {
+        padding: 0;
+        margin-bottom: -50px;
+
+        img {
+            width: 100%;
+            height: 275px;
+            object-fit: cover;
+
+            @include respond-to('medium') {
+                height: 385px;
+            }
         }
     }
 }

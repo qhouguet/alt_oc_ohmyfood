@@ -1,4 +1,6 @@
 .primary-button {
+    position: relative;
+    z-index: 1;
     border-radius: 25px;
     padding: 15px 20px;
     background: $btn-gradient;
@@ -8,16 +10,65 @@
     font-size: 1rem;
     cursor: pointer;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 25%);
-    transition: background 0.2s ease, box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease;
     user-select: none;
+    overflow: hidden;
+
+    &::before {
+        @include absolute;
+        background: $btn-gradient-hover;
+        z-index: -1;
+        transition: opacity 0.2s ease;
+        opacity: 0;
+    }
 
     &:active,
     &:hover {
-        background: $btn-gradient-hover;
+        // background: $btn-gradient-hover;
         box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 35%);
+    }
+
+    &:hover::before {
+        opacity: 1;
     }
 
     &:active {
         transform: translateY(2px);
     }
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fav-btn {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &:hover .fa-regular {
+        opacity: 0;
+    }
+
+    &:hover .fa-solid {
+        opacity: 1;
+    }
+}
+
+.fa-regular.heart {
+    transition: 200ms;
+}
+
+.fa-solid.heart {
+    background-image: $btn-gradient;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    transition: 200ms;
+    opacity: 0;
 }
