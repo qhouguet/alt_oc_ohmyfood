@@ -36,3 +36,39 @@
         transform: translateY(2px);
     }
 }
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fav-btn {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &:hover .fa-regular {
+        opacity: 0;
+    }
+
+    &:hover .fa-solid {
+        opacity: 1;
+    }
+}
+
+.fa-regular.heart {
+    transition: 200ms;
+}
+
+.fa-solid.heart {
+    background-image: $btn-gradient;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    transition: 200ms;
+    opacity: 0;
+}
