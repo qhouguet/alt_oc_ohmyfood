@@ -1,0 +1,28 @@
+.menu-card {
+    display: flex;
+    position: relative;
+    right: 200px;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    animation: fadeInFromLeft 1s forwards;
+
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+            animation-delay: .5s * $i;
+        }
+    }
+
+    h3 {
+        text-transform: uppercase;
+
+        &::after {
+            display: flex;
+            margin-top: .4rem;
+            content: '';
+            height: 3px;
+            width: 40px;
+            background-color: $light-green;
+        }
+    }    
+}

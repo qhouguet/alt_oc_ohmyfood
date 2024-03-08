@@ -1,5 +1,5 @@
 .desktop-wrapper {
-    @include respond-to('medium') {
+    @include respond-to('large') {
         max-width: 1440px;
         width: 100%;
         padding: 0 180px;
@@ -7,8 +7,13 @@
 }
 
 .desktop-wrapper-restaurant {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
     position: relative;
-    // height: 100vh;
     background-color: $light-grey;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -17,5 +22,50 @@
     @include respond-to('medium') {
         max-width: 1055px;
         margin: auto;
+    }
+
+    .restaurant-subheading {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond-to('medium') {
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .subheading {
+            font-family: Shrikhand, sans-serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+
+        .fav-btn {
+            font-size: 1.375rem;
+            padding-right: 35px;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include respond-to('medium') {
+            width: 100%;
+            max-width: 630px;
+            margin: auto;
+        }        
+    }
+
+    .primary-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 190px;
+        margin: auto;
+        padding: 1.1rem;
     }
 }

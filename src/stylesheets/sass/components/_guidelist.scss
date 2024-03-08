@@ -21,14 +21,14 @@
             top: 50%;
             transform: translateY(-50%);
             border-radius: 50%;
-            background-color: #9356DC;
+            background-color: $purple;
             padding: 5px 8px;
             color: white;
             font-size: 0.875rem;
         }
 
         i {
-            color: #7E7E7E;
+            color: $medium-grey;
             margin-right: 25px;
             font-size: 1.25rem;
             width: 1.25rem;
@@ -43,7 +43,7 @@
         }
 
         &:nth-child(3) i {
-            color: #9356DC;
+            color: $purple;
         }
 
         @include respond-to('medium') {

@@ -1,0 +1,37 @@
+.user-guide {
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+        padding: 26px 0 20px 10px;
+    }
+
+    @include respond-to('medium') {
+        align-items: center;
+    }
+}
+
+.restaurants {
+    background-color: $light-grey;
+    padding: 54px 20px;    
+
+    .restaurants-cards {
+        padding: 24px 0 12px;
+
+        @include respond-to('medium') {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    @include respond-to('medium') {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+}
+
